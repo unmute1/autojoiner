@@ -1,3 +1,9 @@
+-- Bootstrap: wait for game and WebSocket API to be ready
+repeat task.wait() until game:IsLoaded() and WebSocket and WebSocket.connect
+
+print("[Autoexec] Environment ready, running obfuscated script...")
+
+-- Obfuscated code below (paste your full obfuscated code here)
 local a = WebSocket.connect("ws://localhost:8765")
 
 a.OnMessage:Connect(function(b)
